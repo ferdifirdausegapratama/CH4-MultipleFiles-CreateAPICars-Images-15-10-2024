@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>photo profile</th>
+      <th>age</th>
+      <th>phone number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% users.map((user)=> { %>
+    <tr>
+      <td><%= user.firstName %></td>
+      <td>
+        <img
+          src="<%= user.photoProfile %>"
+          alt="Profile photo"
+          class="rounded mx-auto d-block"
+          style="width: 100px; height: 100px"
+        />
+      </td>
+      <td><%= user.age %></td>
+      <td><%= user.phoneNumber %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
